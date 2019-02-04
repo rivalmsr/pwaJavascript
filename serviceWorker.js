@@ -52,18 +52,16 @@ self.addEventListener('fetch', function(event){
 });
 
 //default fetch
-self.addEventListener('fetch', function(event){
-  event.respondWith(
-    caches.match(event.request).then(function(response){
-      if(response){
-        return response;
-      }
-      return fetch(event.request);
-  )
-});
-
-
-})
+// self.addEventListener('fetch', function(event){
+//     event.respondWith(
+//       caches.match(event.request).then(function(response){
+//         if(response){
+//           return response;
+//         }
+//         return fetch(event.request);
+//     )
+//   });
+// })
 
 // Update a service worker
 self.addEventListener('activate', function(event){
